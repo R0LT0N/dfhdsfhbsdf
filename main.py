@@ -80,13 +80,13 @@ def send_welcome(message):
 		else:
 			bot.send_message(message.chat.id,'Добро пожаловать в команду <b>'+config.team+'</b>!\nИспользуй кнопки ниже для навигации в боте.', parse_mode='HTML', reply_markup=buttons_start)
 
-@bot.channel_post_handler(content_types=['text','photo','audio','video','document'])
+'''@bot.channel_post_handler(content_types=['text','photo','audio','video','document'])
 def posts_from_channels(message):
 	if True:
-		try:(message.caption).split('\n')
+		try:
+			messtext = str(message.caption).split('\n')
 			first_text = messtext[0].split()
-			print(first_
-			messtext = strtext)
+			print(first_text)
 			if first_text[0] == '🔥 In panel new log!':
 				print(messtext)
 				kogoLog = messtext[1].split(' ')
@@ -104,6 +104,7 @@ def posts_from_channels(message):
 
 		except:
 			print('[-] ERROR SEND LOG')
+'''
 @bot.message_handler(commands=['sendbuild'])
 def send_seestat(message):
 	try:
